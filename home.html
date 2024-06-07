@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Crud System</title>
+  </head>
+  <body class="bg-dark">
+    <section class="navbarCrud shadow-lg sticky-top">
+        <nav class="navba navbar-expand-lg">
+          <div class="navbar-container shadow">
+            <h1 class="navbar-brand text-white text-uppercase cssanimation effect3d">Crud System</h1>
+            <p id="p-welcomeMsg" class=" text-white fw-bold fs-3" >Welcome : <span id="welcomeMsg" class="welcomeMsg text-capitalize"></span></p>
+            <button class="navbar-toggler ms-auto text-white" onclick="SignOut()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </button>
+            <div class="logOutContainer">
+              <svg class="shadow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 532 532"><g><g><circle cx="270.759" cy="260.92941" r="86.34897" fill="#a0616a"/><polygon points="199.2879 366.61365 217.2879 320.61365 310.2879 306.61365 320.28003 408.44043 226.28003 410.44043 199.2879 366.61365" fill="#a0616a"/></g><path d="M357.94449,276.8613c-1.12067,4.48965-3.38602,15.17972-6.9238,15.23233-2.89023,.04208-5.65668-46.33466-2.76953-54.00568,3.31638-8.81271-5.39886-19.96062-11.96411-25.6832-11.80423-10.2894-38.00696,11.80466-64.65118,1.79587-.70633-.26482-.56558-.23502-8.97934-3.59174-25.88966-10.32974-27.2506-10.62788-28.73386-10.77521-12.55046-1.24167-27.86705,9.02844-34.12146,21.55038-6.50168,13.01653-1.06937,24.18106-7.18346,55.67184-.71246,3.67065-1.83138,8.90216-3.59174,8.97934-3.21819,.14029-6.3605-17.04846-7.18346-21.55038-3.44792-18.86186-6.7722-37.04675,0-57.46771,.73878-2.22729,5.29158-10.49458,14.36693-26.93799,13.0744-23.68825,19.65018-35.57709,21.55038-37.7132,13.62859-15.32624,38.43575-29.30734,59.26357-23.34626,10.52704,3.01299,8.63953,7.85691,21.55038,12.57105,23.00821,8.40057,43.00476-1.87303,46.69254,5.3876,1.9537,3.84602-3.51236,7.01686-3.59174,14.36693-.13593,12.6114,15.81424,16.25575,25.14212,28.73386,5.01447,6.70819,13.59753,6.78012-8.87228,96.78212l.00003,.00003Z" fill="#2f2e41"/></g><path d="M464.92017,442.61035c-3.48022,3.91016-7.09009,7.74023-10.83008,11.48047-50.23999,50.23926-117.04004,77.90918-188.09009,77.90918-61.40991,0-119.63989-20.66992-166.75-58.71973-.03003-.01953-.05005-.04004-.07983-.07031-6.25-5.03906-12.30005-10.39941-18.14014-16.05957,.10986-.87988,.22998-1.75,.35986-2.61035,.82007-5.7998,1.73022-11.33008,2.75-16.41992,8.3501-41.71973,118.22021-85.51953,121.08008-86.66016,.04004-.00977,.06006-.01953,.06006-.01953,0,0,14.14014,52.12012,74.72998,51.4502,41.27002-.4502,33.27002-51.4502,33.27002-51.4502,0,0,.5,.09961,1.43994,.2998,11.91992,2.53027,94.68018,20.70996,127.33008,45.52051,9.94995,7.55957,17.08984,23.66016,22.21997,42.85938,.21997,.82031,.42993,1.66016,.65015,2.49023Z" fill="#ffffff"/><path d="M454.09009,77.91016C403.8501,27.6709,337.05005,0,266,0S128.15015,27.6709,77.90991,77.91016C27.67017,128.15039,0,194.9502,0,266c0,64.85059,23.05005,126.16016,65.29004,174.57031,4.03003,4.62988,8.23999,9.13965,12.61987,13.52051,1.03003,1.0293,2.07007,2.05957,3.12012,3.05957,5.84009,5.66016,11.89014,11.02051,18.14014,16.05957,.02979,.03027,.0498,.05078,.07983,.07031,47.11012,38.0498,105.3401,58.71973,166.75001,58.71973,71.05005,0,137.8501-27.66992,188.09009-77.90918,3.73999-3.74023,7.34985-7.57031,10.83008-11.48047,43.36987-48.71973,67.07983-110.83984,67.07983-176.61035,0-71.0498-27.66992-137.84961-77.90991-188.08984Zm10.17993,362.20996c-7.86987,8.9502-16.33008,17.37012-25.33008,25.18066-17.06982,14.84961-36.06982,27.5293-56.55981,37.62988-7.19019,3.5498-14.56006,6.7793-22.1001,9.66992-29.29004,11.24023-61.08008,17.39941-94.28003,17.39941-32.04004,0-62.76001-5.73926-91.18994-16.23926-11.67017-4.30078-22.94995-9.41016-33.78003-15.26074-1.59009-.85938-3.16992-1.72949-4.73999-2.61914-8.26001-4.68066-16.25-9.79004-23.91992-15.31055-10.98999-7.87988-21.3501-16.58984-30.98022-26.03027-5.3999-5.29004-10.55981-10.7998-15.48975-16.5293C26.09009,391.77051,2,331.65039,2,266,2,120.43066,120.42993,2,266,2s264,118.43066,264,264c0,66.66016-24.82983,127.62012-65.72998,174.12012Z" fill="#3f3d56"/></svg>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active text-white fw-bold" aria-current="page" href="index.html">LogOut</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </section>
+    <section class="productMangement my-3 overflow-hidden rounded-3">
+      <div class="container">
+        <div class="row bg-white rounded-2 tr">
+          <div class="col-md-6 pe-3 pt-sm-3">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-name="Layer 1" width="100%" height="100%" viewBox="0 0 836.79488 447.54331"><path d="M214.51663,672.62709l-.04859-.92865c-.01031-.20417-.916-20.56244,11.77923-34.102,12.69583-13.54026,34.48628-15.45558,34.70447-15.47323l.99524-.08088.04842.92827c.01031.20416.9158,20.56205-11.77923,34.102-12.69584,13.54025-34.48627,15.45558-34.70448,15.47322ZM227.632,638.72175c-10.734,11.44747-11.42218,27.96353-11.41679,32.09337,4.39669-.556,21.89283-3.4309,32.61629-14.86784,10.72222-11.43574,11.4189-27.96081,11.41679-32.09338C255.849,624.41024,238.35482,627.28542,227.632,638.72175Z" transform="translate(-181.60256 -226.22835)" fill="#f0f0f0"/><path d="M234.17176,642.56568c-2.7388,18.207-19.22943,29.92875-19.22943,29.92875S202.89214,654.6969,205.63092,636.49s19.22942-29.92876,19.22942-29.92876S236.91055,624.3587,234.17176,642.56568Z" transform="translate(-181.60256 -226.22835)" fill="#f0f0f0"/><rect id="ed526203-2362-4a43-96ca-450f4725da7a" data-name="Rectangle 62" x="307.75354" y="14.50402" width="529.04134" height="251.03929" fill="#e6e6e6"/><rect id="bc241c52-ebb2-41fa-9574-d106f872c1dd" data-name="Rectangle 75" x="322.88165" y="36.03108" width="498.78585" height="209.44993" fill="#fff"/><rect id="bf2b7fee-aafd-4163-88e6-719b489e53a8" data-name="Rectangle 80" x="307.52796" width="529.04134" height="22.47525" fill="#6c63ff"/><circle id="bcccbf37-d4b5-4127-83d7-1cbb700c027e" data-name="Ellipse 90" cx="324.22986" cy="10.39584" r="4.1657" fill="#fff"/><circle id="a113f3b2-577f-43f8-9adc-c82fb7c016a2" data-name="Ellipse 91" cx="340.0415" cy="10.39584" r="4.1657" fill="#fff"/><circle id="b270d923-4b8c-4c85-892d-857a2ab12939" data-name="Ellipse 92" cx="355.85387" cy="10.39584" r="4.1657" fill="#fff"/><rect x="405.63899" y="119.55589" width="105.75586" height="90.07694" fill="#fff"/><path d="M693.30484,436.1686H586.93412V345.4768H693.30484ZM587.549,435.55374H692.69V346.09166H587.549Z" transform="translate(-181.60256 -226.22835)" fill="#3f3d56"/><rect x="445.29743" y="137.07939" width="26.43896" height="72.55344" fill="#6c63ff"/><rect x="445.29743" y="137.07939" width="26.43896" height="72.55344" fill="#6c63ff"/><polygon points="405.946 126.166 405.946 140.78 511.395 147.532 511.084 129.499 405.946 126.166" opacity="0.2"/><rect x="399.49039" y="111.25528" width="118.05305" height="25.8241" fill="#fff"/><path d="M699.45343,363.61516H580.78552v-26.439H699.45343Zm-118.053-.61486H698.83857V337.79106H581.40038Z" transform="translate(-181.60256 -226.22835)" fill="#3f3d56"/><rect x="445.29743" y="108.79584" width="26.43896" height="27.97611" fill="#6c63ff"/><path d="M637.2887,310.63155c6.97909,10.34551.40348,26.98478.40348,26.98478s-17.89095-.13411-24.87-10.47963-.40348-26.98478-.40348-26.98478S630.3096,300.286,637.2887,310.63155Z" transform="translate(-181.60256 -226.22835)" fill="#6c63ff"/><path d="M640.49082,310.63155c-6.97909,10.34551-.40348,26.98478-.40348,26.98478s17.89095-.13411,24.87-10.47963.40348-26.98478.40348-26.98478S647.46991,300.286,640.49082,310.63155Z" transform="translate(-181.60256 -226.22835)" fill="#6c63ff"/><circle cx="440.07113" cy="89.42777" r="2.76687" fill="#3f3d56"/><circle cx="456.67234" cy="117.40388" r="2.76687" fill="#3f3d56"/><circle cx="456.67234" cy="177.96755" r="2.76687" fill="#3f3d56"/><circle cx="447.44944" cy="99.57295" r="1.84458" fill="#3f3d56"/><circle cx="475.11813" cy="83.89403" r="1.84458" fill="#3f3d56"/><circle cx="463.12836" cy="127.24163" r="1.84458" fill="#3f3d56"/><circle cx="452.06089" cy="151.22116" r="1.84458" fill="#3f3d56"/><circle cx="461.59121" cy="159.52176" r="1.84458" fill="#3f3d56"/><circle cx="459.43921" cy="194.26133" r="1.84458" fill="#3f3d56"/><path d="M917.25913,388.20408H760.32027a7.392,7.392,0,1,1,0-14.78409H917.25913a7.392,7.392,0,1,1,0,14.78409Z" transform="translate(-181.60256 -226.22835)" fill="#e4e4e4"/><path d="M866.652,362.90053H760.32027a7.392,7.392,0,1,1,0-14.78409H866.652a7.392,7.392,0,1,1,0,14.78409Z" transform="translate(-181.60256 -226.22835)" fill="#e4e4e4"/><path d="M906.51044,436.1686c5.23615-4.56543,13.68348-8.87561,20.49164-11.39947-6.80816-2.52619-15.25549-6.83643-20.49164-11.4018l3.6905,10.20307H891.05439v2.3974h19.14648Z" transform="translate(-181.60256 -226.22835)" fill="#3f3d56"/><path d="M408.62578,460.59942a8.45126,8.45126,0,0,0-12.50553,3.398l-19.29818-.74461-3.3128,11.61709,27.26754.66877a8.497,8.497,0,0,0,7.849-14.93925Z" transform="translate(-181.60256 -226.22835)" fill="#ffb6b6"/><path d="M393.12028,476.99162l-19.66992,2.47-2.49024.31-40.02,5.02s-12.27978-8.85-23.1997-18.2v-9.76a39.5003,39.5003,0,0,1,9.77-26.04c14.77978,7.17,25.10009,23.98,25.10009,23.98l25.58985,2.5,2.56006.25,15.8999,1.55Z" transform="translate(-181.60256 -226.22835)" fill="#e4e4e4"/><path d="M311.35546,555.35942h37.00193c0,1.58546,40.448,2.8722,40.448,2.8722a14.77562,14.77562,0,0,1,2.424,2.29776,14.258,14.258,0,0,1,3.3322,9.19105v2.29776a14.3663,14.3663,0,0,1-14.361,14.361H311.35546a14.37351,14.37351,0,0,1-14.361-14.361v-2.29776A14.381,14.381,0,0,1,311.35546,555.35942Z" transform="translate(-181.60256 -226.22835)" fill="#3f3d56"/><rect x="156.66054" y="359.58034" width="14.93545" height="86.20813" fill="#3f3d56"/><path d="M395.70713,671.49215c0,1.61372-22.63233.62423-50.55075.62423s-50.55075.98956-50.55075-.62423,22.63234-14.41079,50.55075-14.41079S395.70713,669.87836,395.70713,671.49215Z" transform="translate(-181.60256 -226.22835)" fill="#3f3d56"/><polygon points="224.138 435.413 235.253 435.413 240.541 392.539 224.136 392.539 224.138 435.413" fill="#ffb6b6"/><path d="M402.90464,658.01268l21.8906-.00089h.00089A13.95118,13.95118,0,0,1,438.74654,671.962v.45333l-35.84124.00133Z" transform="translate(-181.60256 -226.22835)" fill="#2f2e41"/><polygon points="256.99 435.413 268.106 435.413 273.394 392.539 256.989 392.539 256.99 435.413" fill="#ffb6b6"/><path d="M435.75759,658.01268l21.89061-.00089h.00088A13.95116,13.95116,0,0,1,471.59949,671.962v.45333l-35.84123.00133Z" transform="translate(-181.60256 -226.22835)" fill="#2f2e41"/><circle cx="163.7177" cy="169.25445" r="19.32689" fill="#ffb6b6"/><path d="M347.50007,386.265s6.87447-9.55585,13.2779.0042,12.73607-2.03675,11.26476-5.6796-1.08368-4.08188-11.751-8.81259-31.17533-14.24354-37.17593,9.36546,6.27757,24.055,6.27757,24.055,2.50512-22.94146,5.39633-16.48242l2.8912,6.459,2.9704,1.06007Z" transform="translate(-181.60256 -226.22835)" fill="#2f2e41"/><path d="M307.74208,527.90315s-6.48479,34.29038,18.18867,38.657,60.2902,7.4356,60.2902,7.4356l15.99432,74.62332,21.488-1.91839s-2.85783-89.82981-9.88578-96.85777-51.44725-28.07128-51.44725-28.07128Z" transform="translate(-181.60256 -226.22835)" fill="#2f2e41"/><path d="M355.931,513.53181l10.791,10.82555s77.91729,12.5504,80.92315,30.54672c4.53813,27.17016,9.89839,86.25357,9.89839,86.25357l-23.42653-1.757-9.1865-67.16187L387.448,563.71271l-42.6446-23.24039Z" transform="translate(-181.60256 -226.22835)" fill="#2f2e41"/><path d="M365.37028,522.77165s-60.18994,23.58-58.87012,9.71c1.53027-16.07,1.24024-23.07,1.24024-23.07v-52.58a39.62163,39.62163,0,0,1,21-34.96l20.31982.34,6.27,8.31c5.04,25.25,6.04,28.25,6.04,28.25l4.20019,11.5.87989,7.19-3.08008,15.31Z" transform="translate(-181.60256 -226.22835)" fill="#e4e4e4"/><path d="M414.79778,460.6556l-.11824-.03675,1.9764-6.35835c.63175-2.03244.30461-3.94095-.7307-4.26276h0l-6.86195-2.13293c-1.0353-.32183-2.38672,1.06492-3.01848,3.09738h0l-10.84268,34.88249c-.63176,2.03246-.30464,3.941.73067,4.26277h0l6.862,2.13294c1.03531.32181,2.38672-1.0649,3.01848-3.09736l0,0,7.45945-23.99815.11824.03675Z" transform="translate(-181.60256 -226.22835)" fill="#6c63ff"/><path d="M415.79778,461.6556l-.11824-.03675,1.9764-6.35835c.63175-2.03244.30461-3.94095-.7307-4.26276h0l-6.86195-2.13293c-1.0353-.32183-2.38672,1.06492-3.01848,3.09738h0l-10.84268,34.88249c-.63176,2.03246-.30464,3.941.73067,4.26277h0l6.862,2.13294c1.03531.32181,2.38672-1.0649,3.01848-3.09736l0,0,7.45945-23.99815.11824.03675Z" transform="translate(-181.60256 -226.22835)" fill="#3f3d56"/><ellipse cx="410.18524" cy="460.7855" rx="2.36056" ry="1.20244" transform="translate(-333.18953 489.48301) rotate(-72.73295)" fill="#d0cde1"/><path d="M412.9959,475.59942a8.45122,8.45122,0,0,0-12.50553,3.398l-19.29818-.74461-3.3128,11.61709,27.26754.66877a8.497,8.497,0,0,0,7.849-14.93925Z" transform="translate(-181.60256 -226.22835)" fill="#ffb6b6"/><path d="M397.4904,491.99162l-22.16016,2.78-40.02,5.02s-15.87012-11.44-27.56982-22.05v-20.91a39.53793,39.53793,0,0,1,2.62988-14.19c20.64014,1.13,36.60986,27.13,36.60986,27.13l25.59033,2.5,18.46,1.8Z" transform="translate(-181.60256 -226.22835)" fill="#e4e4e4"/><path d="M563.60256,673.77165h-381a1,1,0,0,1,0-2h381a1,1,0,0,1,0,2Z" transform="translate(-181.60256 -226.22835)" fill="#cacaca"/></svg>
+          </div>
+          <div class="col-md-6">
+            <section
+              class="crwd-board m-auto my-3 overflow-hidden rounded-2 pb-3"
+            >
+              <h1
+                class="text-center fw-bold text-uppercase my-4 animate__animated animate__fadeInDown cssanimation effect3d"
+              >
+              Product Mangment System
+              </h1>
+              <div
+                class="form-floating mb-3 mx-3 animate__animated animate__fadeInLeft"
+              >
+                <input
+                  type="text"
+                  class="form-control"
+                  oninput="validationInputs(this)"
+                  id="productName"
+                  placeholder=""
+                />
+                <label for="productName">Product Name</label>
+              </div>
+              <div
+                class="form-floating mb-3 mx-3 animate__animated animate__fadeInRight"
+              >
+                <input
+                  list="Category"
+                  type="text"
+                  class="form-control"
+                  oninput="validationInputs(this)"
+                  id="productCategory"
+                  placeholder=""
+                />
+                <label for="productCategory">Product Category</label>
+                <datalist id="Category">
+                  <option value="Tv" />
+                  <option value="Mobile" />
+                  <option value="Screen" />
+                  <option value="Laptop" />
+                  <option value="Computer" />
+                </datalist>
+              </div>
+              <div
+                class="form-floating mb-3 mx-3 animate__animated animate__fadeInLeft"
+              >
+                <input
+                  type="number"
+                  class="form-control"
+                  oninput="validationInputs(this)"
+                  id="productPrice"
+                  placeholder=""
+                />
+                <label for="productPrice">Product Price</label>
+              </div>
+              <div
+                class="form-floating mb-3 mx-3 animate__animated animate__fadeInRight"
+              >
+                <textarea
+                  class="form-control"
+                  oninput="validationInputs(this)"
+                  id="productDescription"
+                  placeholder=""
+                ></textarea>
+                <label for="productDescription">Product Description</label>
+              </div>
+              <div
+                class="form-floating mb-4 mx-3 animate__animated animate__fadeInLeft"
+              >
+                <input type="file" class="form-control" id="img" placeholder="" />
+                <label for="productPrice">Product Imge</label>
+              </div>
+              <div class="mx-3 d-flex justify-content-start">
+                <button class="CartBtn text-white" id="addProduct" onclick="addProduct()">
+                  <span class="IconContainer">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                  </span>
+                  <p class="text">Add Product</p>
+                </button>
+                <button
+                  onclick="Updating()"
+                  id="updateProduct"
+                  class="btn btn-warning rounded-2 d-none"
+                >
+                  Update Product
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="form-floating w-50 m-auto mb-3"
+      data-aos="fade-up"
+      data-aos-offset="50"
+    >
+      <input
+        type="text"
+        class="form-control shadow-none rounded-3"
+        id="search"
+        placeholder=""
+        oninput="search()"
+      />
+      <label for="productPrice">Search By Product Name</label>
+    </div>
+    <section class="product my-5">
+      <div class="container">
+        <div class="row gy-4" id="products"></div>
+      </div>
+    </section>
+    <script src="js/home.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

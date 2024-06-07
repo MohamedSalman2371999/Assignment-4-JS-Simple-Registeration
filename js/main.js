@@ -38,7 +38,6 @@ if (log_In) {
         }
     }
   }
-    clearInputsSignIn();
   });
 }
 if (sign_Up) {
@@ -67,6 +66,7 @@ if (sign_Up) {
           P_WorngSuccess.classList.remove("d-none");
           P_WorngExsist.classList.add("d-none");
           P_WorngRequired.classList.add("d-none");
+          clearInputsSignUp();
         
         }
     }else{
@@ -75,9 +75,6 @@ if (sign_Up) {
       P_WorngExsist.classList.add("d-none");
       P_WorngRequired.classList.add("d-none");
     }
-
-
-     clearInputsSignUp();
   });
 }
 function clearInputsSignUp() {
@@ -130,3 +127,4 @@ function validationInputs(elemnt){
       box_modal.classList.add('d-none')
     })
   }
+  

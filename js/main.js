@@ -67,12 +67,17 @@ if (sign_Up) {
           P_WorngSuccess.classList.remove("d-none");
           P_WorngExsist.classList.add("d-none");
           P_WorngRequired.classList.add("d-none");
+        
         }
     }else{
       box_modal.classList.remove('d-none')
+      P_WorngSuccess.classList.add("d-none");
+      P_WorngExsist.classList.add("d-none");
+      P_WorngRequired.classList.add("d-none");
     }
-      clearInputsSignUp();
 
+
+     clearInputsSignUp();
   });
 }
 function clearInputsSignUp() {
@@ -108,7 +113,7 @@ function validationInputs(elemnt){
     signUpEmail: /^[A-Z]?(\w|\.){1,}\@gmail.com$/,
     signUpPassword: /^(\w|\.| |@){8,}$/,
     signInEmail:/^[A-Z]?(\w|\.){1,}\@gmail.com$/,
-    signInPassword:/^(\w|\.| |@){8,}$/,
+    signInPassword:/^([A-Z]|[a-z])+(\w|\.| |@){8,}$/,
   };
   if(regx[elemnt.id].test(text)){
     elemnt.classList.add("is-valid")
@@ -125,4 +130,3 @@ function validationInputs(elemnt){
       box_modal.classList.add('d-none')
     })
   }
-  

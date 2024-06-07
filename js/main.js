@@ -111,7 +111,7 @@ function validationInputs(elemnt){
   regx={
     signUpName: /^([A-Z]|[a-z])+\w? ?\w{1,}$/,
     signUpEmail: /^[A-Z]?(\w|\.){1,}\@gmail.com$/,
-    signUpPassword: /^(\w|\.| |@){8,}$/,
+    signUpPassword: /^([A-Z]|[a-z])+(\w|\.| |@){8,}$/,
     signInEmail:/^[A-Z]?(\w|\.){1,}\@gmail.com$/,
     signInPassword:/^([A-Z]|[a-z])+(\w|\.| |@){8,}$/,
   };

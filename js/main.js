@@ -67,12 +67,11 @@ if (sign_Up) {
           P_WorngSuccess.classList.remove("d-none");
           P_WorngExsist.classList.add("d-none");
           P_WorngRequired.classList.add("d-none");
-             clearInputsSignUp();
         }
     }else{
       box_modal.classList.remove('d-none')
     }
-
+      clearInputsSignUp();
 
   });
 }

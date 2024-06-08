@@ -136,7 +136,7 @@ function SignOut(){
 function validationInputs(elemnt){
 text=elemnt.value
 regx={
-  productName:/^[A-Z]\w{3,10}$/,
+  productName:/^([A-Z]|[a-z])\w{2,10}$/,
   productCategory:/^(tv|mobile|laptop|screen|computer)$/i,
   productPrice:/^[1-9][0-9]{3,6}$/,
   productDescription:/^.{3,}$/m

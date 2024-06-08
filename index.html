@@ -36,7 +36,11 @@
             <div class="row justify-content-center">
               <div class="inputsConainer col-signIn mt-4 pt-5 ps-sm-3">
                   <input  id="signInEmail" class="form-control my-3 animate__animated animate__fadeInLeft" type="text" placeholder="Enter Your Email">
-                  <input  id="signInPassword" class="form-control mb-3 animate__animated animate__fadeInRight" type="password" placeholder="Enter Your Password">
+                  <div class="passwordContainer w-100 d-flex bg-white rounded-2">
+                    <input  id="signInPassword" class="form-control animate__animated animate__fadeInRight" type="password" placeholder="Enter Your Password">
+                    <i id="showPasswordSignIn" class="fa fa-eye d-none" aria-hidden="true"></i>
+                    <i id="hiddenPasswordSignIn" class="fa fa-eye-slash" aria-hidden="true"></i>
+                  </div>
                   <p id="p-worng-incorrectLogIn" class="p-worng-incorrect text-danger fw-bold animate__animated animate__fadeInDown d-none">Incorrect Email or Password</p>
                   <p id="p-worng-requiredLogIn" class="p-worng-requiredLogIn text-danger fw-bold animate__animated animate__fadeInDown d-none">All Inputs Is Required</p>
                   <button id="logIn" type="submit" class="my-3 animate__animated animate__fadeInDown">LogIn</button>

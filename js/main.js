@@ -13,6 +13,10 @@ var P_WorngIncorrectLogIn = document.getElementById("p-worng-incorrectLogIn");
 var P_WorngRequiredLogIn = document.getElementById("p-worng-requiredLogIn");
 var box_modal = document.getElementById("modalShown");
 var closebox_modal = document.getElementById("closeBtn");
+var showPasswordSignOut = document.getElementById("showPasswordSignOut");
+var hiddenPasswordSignOut = document.getElementById("hiddenPasswordSignOut");
+var showPasswordSignIn = document.getElementById("showPasswordSignIn");
+var hiddenPasswordSignIn = document.getElementById("hiddenPasswordSignIn");
 
 var userContainer = [];
 
@@ -127,4 +131,31 @@ function validationInputs(elemnt){
       box_modal.classList.add('d-none')
     })
   }
-  
+  if(hiddenPasswordSignOut){
+  hiddenPasswordSignOut.addEventListener('click',function(){
+    signUpPassword.setAttribute('type' , 'text');
+    hiddenPasswordSignOut.classList.add('d-none')
+    showPasswordSignOut.classList.remove('d-none')
+  })
+}
+if(showPasswordSignOut){
+  showPasswordSignOut.addEventListener('click',function(){
+    signUpPassword.setAttribute('type' , 'password');
+    showPasswordSignOut.classList.add('d-none')
+    hiddenPasswordSignOut.classList.remove('d-none')
+  })
+}
+if(hiddenPasswordSignIn){
+    hiddenPasswordSignIn.addEventListener('click',function(){
+      signInPassword.setAttribute('type' , 'text');
+      hiddenPasswordSignIn.classList.add('d-none')
+      showPasswordSignIn.classList.remove('d-none')
+    })
+}
+if(showPasswordSignIn){
+  showPasswordSignIn.addEventListener('click',function(){
+    signInPassword.setAttribute('type' , 'password');
+    showPasswordSignIn.classList.add('d-none')
+    hiddenPasswordSignIn.classList.remove('d-none')
+  })
+}
